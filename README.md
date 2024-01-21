@@ -30,6 +30,9 @@ For å hente posisjoner, dtg eller noe annet med et gitt mønster ut fra tekst e
 
 For behandling av dato og tid er det [datetime](https://docs.python.org/3/library/datetime.html) som gjelder. For å gjøre om tekst til dato/tid kan du bruke [datetime.datetime.strptime()](https://docs.python.org/3/library/datetime.html#datetime.datetime.strptime). Hvis du er litt lat anbefaler jeg å ta en kikk på [dateutil](https://dateutil.readthedocs.io/en/stable/). Den kan gjøre livet ditt enklere.
 
+### Bakerier i Beijing
+Filen [beijing_bakerier.geojson](data/beijing_bakerier.geojson) inneholder alle bakerier innenfor et område av Beijing sentrum hentet fra OpenStreetMap. Geojson filer lastes veldig greit med `geopandas.read_file()`. Lokasjonene er obfuskert i henhold til GCJ-02 datumet, som man vil finne på all lokasjonsdata fra Kina i Google Maps og andre kartjenester på internett. Bruk [prcoords](https://github.com/Artoria2e5/PRCoords) til fjerne tilsløringen for å få korrekte WGS-84 koordinater. Bonus: oversett kineske navn til engelske.
+
 ## Presentasjon
 Etter at data er trukket ut av filene og lagt i en ryddig struktur (f.eks [pandas](https://pandas.pydata.org/)) kan de rimelig enkelt plottes i et kart. Her er det mange alternativer. Her er noen:
 * [ipyleaflet](https://ipyleaflet.readthedocs.io/en/latest/)

@@ -3,3 +3,8 @@ lxml
 mgrs
 geopy
 openpyxl
+overpy
+requests
+geopandas
+shapely
+prcoords
