@@ -10,3 +10,4 @@ shapely
 prcoords
 jupyter
 pydeck
+esridump
